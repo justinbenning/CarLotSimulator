@@ -1,16 +1,20 @@
-﻿using System;
+﻿using CarLotSimulator;
+using System;
 
 //Create a seperate class file called Car
 public class Car
 {
     public Car()
     {
-
+        CarLot.numberOfCars++;
     }
+    
+    
     //Create a seperate class file called Car
     //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
     public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
     {
+        CarLot.numberOfCars++;
         Year = year;
         Make = make;
         Model = model;
@@ -19,6 +23,7 @@ public class Car
         IsDriveable = isDriveable;
 
     }
+
     public int Year { get; set; }
     public string Make { get; set; }
     public string Model { get; set; }
